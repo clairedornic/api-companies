@@ -20,11 +20,11 @@ Retrieve the list of companies with pagination and name filtering options.
 - `page` (optional): Page number for pagination (default: 1).
 - `name` (optional): Filter companies by name.
 
-**Usage Examples:**
+**Usage examples:**
 - Retrieve the first page of companies: `/companies?page=1`
 - Filter companies by name: `/companies?name=Example`
 
-### Retrieve a Company by ID
+### Retrieve a company by ID
 
 Retrieve information about a company based on its ID.
 
@@ -35,10 +35,10 @@ Retrieve information about a company based on its ID.
 **Parameters:**
 - `id`: The ID of the company.
 
-**Usage Example:**
+**Usage example:**
 - Retrieve information about the company with ID 1: `/companies/1`
 
-### Retrieve Establishments of a Company
+### Retrieve establishments of a company
 
 Retrieve the list of establishments belonging to a company based on its ID.
 
@@ -49,7 +49,7 @@ Retrieve the list of establishments belonging to a company based on its ID.
 **Parameters:**
 - `id`: The ID of the company.
 
-**Usage Example:**
+**Usage example:**
 - Retrieve establishments of the company with ID 1: `/establishments/company/1`
 
 ## Errors
