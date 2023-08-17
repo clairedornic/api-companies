@@ -130,7 +130,6 @@ app.use((req, res, next) => {
  * Internal error
  */
 app.use((err, req, res, next) => {
-  console.error(err.stack);
   res.status(500).json({ error: 'An internal error has occurred.' });
 });
 
