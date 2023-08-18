@@ -27,6 +27,20 @@ app.get('/', (req, res) => {
 })
 
 /**
+ * Get the total number of companies
+ */
+app.get('/companies/count', async (req, res) => {
+  try {
+    const totalCount = await knex('companies').count('* as count');
+    const count = totalCount[0].count;
+
+    res.json(count);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred when retrieving the total number of companies.' });
+  }
+});
+
+/**
  * Get all companies
  * Handle pagination
  * Filter by name
