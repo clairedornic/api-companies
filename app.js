@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 require('./services/db');
 const importDataApi = require('./services/importDataApi');
 const app = express()
@@ -13,6 +14,10 @@ const knex = require('knex')({
     database: process.env.DB_NAME,
   }
 });
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+}));
 
 /**
  * Welcome URL
